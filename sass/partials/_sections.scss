@@ -1,0 +1,143 @@
+.mainContentArea {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+
+    &.is_active {
+        overflow: hidden
+    }
+}
+
+.section_block {
+    padding: 70px 0 30px;
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .container {
+        z-index: 5;
+    }
+}
+
+.section_cto {
+    margin-top: 40px;
+    clear: both;
+}
+
+.section_header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.title {
+    line-height: 1.45;
+    font-size: 14px;
+    @include break-inside(avoid);
+
+    @include MQ(M) {
+        font-size: 18px;
+    }
+}
+
+.title_sm {
+    font-size: 16px;
+    
+    @include MQ(M) {
+        font-size: 21px;
+    }
+}
+
+.title_md {
+    font-size: 21px;
+    
+    @include MQ(M) {
+        font-size: 32px;
+    }
+}
+
+.title_lg {
+    font-size: 32px;
+    
+    @include MQ(M) {
+        font-size: 42px;
+    }
+}
+
+footer[role="contentinfo"] {
+    width: 100%;
+    clear: both;
+}
+
+.pageFooter {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba($color_white, .6);
+    background-color: $brand_black;
+}
+
+.footerTop {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba($brand_primary, .25);
+    @include flexbox();
+
+    @include MQ-MAX(M) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include MQ(M) {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.filteNav {
+    padding: 15px;
+
+    @include MQ(M) {
+        padding-top: 0;
+        padding-bottom: 0
+    }
+}
+
+.msFtNav {
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
+  }
+
+  .msFtNavItem {
+    padding: 0 10px;
+  }
+
+  .socialLinks {
+    clear: both;
+    @include flexbox();
+    
+    @include MQ-MAX(M) {
+        justify-content: center;
+    }
+}
+
+.socialLinkItem {
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
+    opacity: .6;
+    background-color: transparent;
+    @include transition(all .4s ease-in-out 0s);
+    
+    +.socialLinkItem {
+        margin-left: 20px;
+    }
+    
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}

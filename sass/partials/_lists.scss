@@ -1,0 +1,120 @@
+.media_item {
+    @include flexbox();
+    overflow: hidden;
+}
+
+.media_figure {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 20px;
+
+    @include MQ-MAX(M) {
+        margin-right: 15px;
+    }
+}
+
+.media_info {
+    flex: 1;
+}
+
+.iconBox {
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    background-color: $color_white;
+    fill: $brand_primary;
+
+    @include MQ(M) {
+        width: 48px;
+        height: 48px;
+    }
+
+    @include MQ-MAX(M) {
+        .cust_icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.avi_avg {
+    height: 32px;
+    width: 32px;
+}
+
+.avi_sm {
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+}
+
+.avi_md {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+} 
+
+.avi_lg {
+    width: 64px;
+    height: 64px;
+    font-size: 21px;
+} 
+
+.avi_large {
+    width: 64px;
+    height: 64px;
+    font-size: 21px;
+
+    @include MQ(M) {
+        width: 96px;
+        height: 96px;
+        font-size: 48px;
+    }
+}
+
+.infoTileItem {
+    margin-top: 30px;
+
+    @include MQ(M) {
+        .no-gutters & {
+            + .infoTileItem {
+                border-left: 2px solid $brand_primary;
+            }
+        }
+    }
+}
+
+.infoTileWrapper {
+    @include flexbox();
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+}
+
+.infoTileInner {
+    font-size: 14px;
+}
+
+.useCaseWrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+
+}
+
+.tileBannerImg{
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+}
